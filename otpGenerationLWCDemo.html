@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="OTP Generator" icon-namee="custom:custom14">
+        <div class="slds-var-p-around_medium">
+            <p>Please click the button below to generate OTP</p>
+            <lightning-button label="Generate OTP" variant="brand" onclick={generateOTP} disabled={disableOTP}></lightning-button>
+        </div>
+        <div class="slds-var-p-around_medium">
+            Here is your OTP : {SentOTP}
+        </div>
+        <template lwc:if={showTimer}>
+            <div class="slds-var-p-around_medium">
+                {showTimerText}
+            </div>
+        </template>        
+    </lightning-card>
+</template>
